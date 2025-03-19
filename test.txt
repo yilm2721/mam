@@ -1,1 +1,70 @@
-Hello this is a test file(yilm)
+---------Login Form----
+
+package Composition;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
+
+public class LoginForm extends JFrame{
+    //label
+    private JLabel username;
+    private JLabel password;
+    //textfield
+    private JTextField txtusername;
+    private JPasswordField txtpassword;
+    //Button
+    private JButton login;
+    
+    //Constructor
+    public LoginForm()
+    {
+
+       setTitle("Login");  
+       
+       username  = new JLabel("User Name:");
+       password = new JLabel("Password:");
+       txtusername = new JTextField();
+       txtpassword = new JPasswordField();
+       login = new JButton("Login");
+       
+       setLayout(null);
+       
+       username.setBounds(10, 10, 200, 30);  //username   100   textfield
+       txtusername.setBounds(100, 10, 200, 30);
+       
+       password.setBounds(10, 50, 200, 30);  //password   100  passwordfield
+       txtpassword.setBounds(100, 50, 200, 30);
+      
+       login.setBounds(30, 100, 100, 30);
+       
+       add(username);
+       add(password);
+       add(txtusername);
+       add(txtpassword);
+       add(login);
+       
+       setSize(400,200);
+       setLocation(400,150);
+       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       setVisible(true);
+       
+       ActionListener lis = new ActionListener() {
+           @Override
+           public void actionPerformed(ActionEvent e) {
+               System.out.println("Button Clicked!!");
+           }
+       }; 
+       login.addActionListener(lis);
+    }
+    public static void main(String[]args)
+    {
+        LoginForm obj = new LoginForm();
+    }   
+}
+

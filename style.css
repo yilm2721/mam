@@ -1,0 +1,45 @@
+.custom-card {
+  min-height: 400px; /* or any height you prefer */
+}
+
+nav.sticky-top {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1050 !important; /* keep it on top */
+  background-color: #f8f9fa; /* optional, avoid transparency */
+}
+
+article h1,
+section h1,
+nav h1,
+aside h1 {
+    font-size: 30px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.dropdown-item:hover {
+  color: white;
+  background-color: gray;
+}
+
+lite-youtube {
+  background-size: cover;
+  background-position: center;
+}
+#backToTopBtn{
+z-index:1030;
+border-radius:50%;
+}
+@media (max-width: 991.98px) { 
+  .navbar-nav, .dropdown-menu {
+    background-color:lightblue;
+  }
+	.nav-item:hover{
+	color: white;
+  background-color: gray;
+}
+}
+
+
